@@ -10,6 +10,7 @@
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 </head>
+<body>
 <header>
     <div class="dropdown">
         <button onclick="myFunction()" class="btn-72">Choose your tea</button>
@@ -21,11 +22,14 @@
         </div>
       </div>
 </header>
-<body>
+
     <container>
         <div class="dynamic-content">Tea instructions</div>
-        <divc class="dynamic-content">Timer
-            <p id="Timer"></p>
+        <divc class="dynamic-content">
+            <p id="Timer">Tea Timer</p>
+            <button class="btn-72" id="start">Start</button>
+            <button class="btn-72" id="stop">Stop</button>
+            <button class="btn-72" id="reset">Reset</button>
         </div>
         <div><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/17MsP8T7iT2jSyhIQ4hGDU?utm_source=generator" width="0" height="0" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> 
         <button id="music-player" class="btn-51">Play Music</button>

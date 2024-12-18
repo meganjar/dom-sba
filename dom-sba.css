@@ -1,6 +1,7 @@
-.body {
+body {
     background-image: url(./assets/bg-dom.png);
     height: 100vh;
+    background-position: center;
     
 }
 
@@ -10,6 +11,8 @@
     align-items: center;
     }
 
+
+    /* Button styling */
     .btn-51,
     .btn-51 *,
     .btn-51 :after,
@@ -149,3 +152,18 @@
 .btn-72:active {
   box-shadow: inset 5px 5px 10px #cee3f2, inset -5px -5px 10px #faffff;
 }
+
+/* dropdown menu styling */
+
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #298
