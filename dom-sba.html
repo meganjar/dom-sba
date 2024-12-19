@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./dom-sba.js"></script>
+   
     <link rel="stylesheet" href="./dom-sba.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Latest compiled and minified CSS -->
@@ -12,28 +12,33 @@
 </head>
 <body>
 <header>
-    <div class="dropdown">
-        <button onclick="myFunction()" class="btn-72">Choose your tea</button>
-        <div id="myDropdown" class="dropdown-content">
-          <a href="#">Green</a>
-          <a href="#">White</a>
-          <a href="#">Black</a>
-          <a href="#">herbal</a>
+    <div class="dropdown-div">
+        <button id="choose-tea-btn" onclick=()" class="btn-72 dropbtn" type="button">Choose your tea</button>
+        <div id="dropdown-menu" class="dropdown-content">
+          <a href="#" class="btn-72">Green</a>
+          <a href="#" class="btn-72">White</a>
+          <a href="#" class="btn-72">Black</a>
+          <a href="#" class="btn-72">herbal</a>
         </div>
       </div>
 </header>
 
     <container>
-        <div class="dynamic-content">Tea instructions</div>
-        <divc class="dynamic-content">
-            <p id="Timer">Tea Timer</p>
-            <button class="btn-72" id="start">Start</button>
-            <button class="btn-72" id="stop">Stop</button>
-            <button class="btn-72" id="reset">Reset</button>
+        <div class="dynamic-content"><H3>Tea instructions</H3></div>
+        <div class="timer-div">
+            <h1 id="Timer-text">Tea Timer</h1>
+            <div id="timer-buttons"></div>
+            <button class="btn-72" id="start" type="button">Start</button>
+            <button class="btn-72" id="stop" type="button">Stop</button>
+            <button class="btn-72" id="reset" type="button">Reset</button>
+            </div>
+            </div>
         </div>
-        <div><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/17MsP8T7iT2jSyhIQ4hGDU?utm_source=generator" width="0" height="0" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> 
-        <button id="music-player" class="btn-51">Play Music</button>
-    </div>
     </container>
+
+    <div id="music-player"><iframe style="border-radius:12px; display:none;" src="https://open.spotify.com/embed/playlist/17MsP8T7iT2jSyhIQ4hGDU?utm_source=generator" width="0" height="0" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media;  picture-in-picture" loading="lazy"></iframe>
+        <button id="music-button" class="btn-51">Play Music</button>
+    </div>
+    <script src="./dom-sba.js"></script>
 </body>
 </html>
