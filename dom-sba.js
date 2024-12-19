@@ -26,3 +26,9 @@ var x = setInterval(function() {
     document.getElementById("timer").innerHTML = "Your tea is ready! :)";
   }
 }, 1000);
+
+TeaArr = [
+    {type: green, time: 2 , temp: 160},
+    {type: white, time: 3 , temp: 180},
+    {type: black, time: 4 , temp: 212},
+    {type: herbal, time: 5 , temp: 212} ]
