@@ -74,22 +74,39 @@ function playMusic(){
 
     chooseTea()
 
+
+    // 1. Function will listen for click event on the dropdown menu buttons onplay. 
+    // 2. Upon click, it will parse through the teaArr and look for the objects whos text property matches the button element text.  
+    // 3. When a match is found it will then use the matching objects other properties to dynamically populate the temp and time variables
+    //  4. which are then inserted into tea instructions and timer as template literal values.
     function teaTypePopulate() {
+        let time = 0
+            let temp = 0
 
 
         teaButtonsEl.forEach((button) => {
             let buttonText = button.textContent
-
+            let minutes = 0
+            let temp = 0
+            let type = ""
+        
+                // 1.
             button.addEventListener("click", () => {
-                teaArr.forEach((object) => {
-                    console.log(object.type)
-                    console.log(buttonText)
+                //2. 
+                teaArr.forEach((teaObject) => {
+                    // console.log(teaObject.type)
+                    // console.log(buttonText)
                
-                   
-                    if (object.type == buttonText) {
-                
-                        teaTimerEl.textContent = object.time
-                        teaInstructionsEl.textContent = object.temp }
+                        // 3.
+                    if (teaObject.type == buttonText) {
+                       temp = teaObject.temp;
+                        minutes = teaObject.time;
+                        type = teaObject.type;
+
+                    
+                        // 4.                     
+                        teaTimerEl.textContent = `${minutes}:00`
+                        teaInstructionsEl.textContent = `Brew ${type} tea at ${temp}°F for ${minutes} minutes.`}
 
                     //     else { console.log("not a match") } 
             })})
