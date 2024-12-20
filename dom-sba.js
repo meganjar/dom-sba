@@ -64,41 +64,34 @@ function playMusic(){
             musicPlayerEl.textContent = "Play Music";
             isPlaying = false;
         }
-        })}
+        })} playMusic()
 
     function chooseTea() {
         chooseTeaEl.addEventListener("click", () => {
             dropdownEl.classList.toggle("no-display")
         })   
     }
-    playMusic()
-
 
     chooseTea()
 
-//     function teaTypePopulate() { 
+    function teaTypePopulate() {
 
 
-//         teaButtonsEl.forEach((button) => {
+        teaButtonsEl.forEach((button) => {
+            let buttonText = button.textContent
 
-//             button.addEventListener("click", ) => {
-//                 teaArr.forEach((object) => {
-//                     console.log(object.type)
-//                     const buttonText = button.textContent
+            button.addEventListener("click", () => {
+                teaArr.forEach((object) => {
+                    console.log(object.type)
+                    console.log(buttonText)
                
                    
-//                     if (object.type == buttonText) {
-//                         console.log("match")
-//                         teaTimerEl.textContent = "time"
-//                         teaInstructionsEl.textContent = "temp" }
+                    if (object.type == buttonText) {
+                
+                        teaTimerEl.textContent = object.time
+                        teaInstructionsEl.textContent = object.temp }
 
-//                         else { console.log("not a match") } 
-
-                    
-//                 })
-            
-              
-// }
-
-    
-//     teaTypePopulate()
+                    //     else { console.log("not a match") } 
+            })})
+                })}
+    teaTypePopulate()

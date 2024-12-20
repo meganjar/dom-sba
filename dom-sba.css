@@ -38,7 +38,7 @@ header {
         top: 120px; /* Adjust the vertical position */
         left: 50%; /* Center it horizontally */
         transform: translateX(-50%); /* Ensure true horizontal centering */
-        border: 5px solid #43e243;
+        
         padding: 20px;
         width: 70%; /* Optional: Adjust width */
     }
@@ -135,8 +135,32 @@ header {
        
         border-radius: 10px; /* Rounds the container's edges */
     }
+    .btn-51 {
+        position: absolute; 
+        top: 50%; 
+        left: 100px; 
+        transform: translate(-50%, -80%);
+    }
+  
 
-   */
+}
+
+@media (max-width: 400px) {
+    .btn-51  {
+        position: absolute;
+        margin-bottom: 15%;
+        width: 150px;
+
+}
+container {
+    
+    justify-items: center;
+    top: 120px; /* Adjust the vertical position */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Ensure true horizontal centering */
+    border: 5px solid #43e243;
+    padding: 20px;
+    width: 70%; /* Optional: Adjust width */
 }
 
   
@@ -209,10 +233,8 @@ header {
     .btn-51 {
         position: absolute; 
         top: 50%; 
-        left: 30%; 
+        left: 34%; 
         transform: translate(-50%, -80%);
-    }
-    .btn-51 {
       -webkit-tap-highlight-color: transparent;
       -webkit-appearance: button;
       background-color: #000;
