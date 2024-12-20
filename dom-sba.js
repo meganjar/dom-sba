@@ -27,22 +27,78 @@
 //   }
 // }, 1000);
 
-// TeaArr = [
-//     {type: green, time: 2 , temp: 160},
-//     {type: white, time: 3 , temp: 180},
-//     {type: black, time: 4 , temp: 212},
-//     {type: herbal, time: 5 , temp: 212} ]
+let teaArr = [
+    {type: "green", time: 2 , temp: 160},
+    {type: "white", time: 3 , temp: 180},
+    {type: "black", time: 4 , temp: 212},
+    {type: "herbal", time: 5 , temp: 212} ]
+
+
 let chooseTeaEl = document.getElementById("choose-tea-btn")
 let dropdownEl = document.getElementById("dropdown-menu")
+let teaButtonsEl = document.querySelectorAll(".tea-btn")
+let teaInstructionsEl = document.querySelector(".dynamic-content")
+let teaTimerEl = document.getElementById("timer-text")
+let startTimerEl = document.getElementById("start")
+let stopTimerEl = document.getElementById("stop")
+let resetTimerEl = document.getElementById("reset")
+let musicPlayerEl = document.getElementById("music-button")
+let audioPlayerEl = document.getElementById("audio-player")
+// console.log(musicPlayerEl);
 
-console.log(chooseTeaEl)
-console.log(dropdownEl)
+// // console.log(teaButtonsEl)
+// // console.log(chooseTeaEl)
+// // console.log(dropdownEl)
+// console.log(teaArr)
+let isPlaying = false
+function playMusic(){
+ 
+    musicPlayerEl.addEventListener("click", () => {
+        if (isPlaying === false) {
+            audioPlayerEl.play();
+            musicPlayerEl.textContent = "Pause Music";
+            isPlaying = true;
+        }
+        else {
+            audioPlayerEl.pause();
+            musicPlayerEl.textContent = "Play Music";
+            isPlaying = false;
+        }
+        })}
+
     function chooseTea() {
         chooseTeaEl.addEventListener("click", () => {
-          
-            dropdownEl.classList.toggle("display")
-        })
-        
+            dropdownEl.classList.toggle("no-display")
+        })   
     }
+    playMusic()
+
 
     chooseTea()
+
+//     function teaTypePopulate() { 
+
+
+//         teaButtonsEl.forEach((button) => {
+
+//             button.addEventListener("click", ) => {
+//                 teaArr.forEach((object) => {
+//                     console.log(object.type)
+//                     const buttonText = button.textContent
+               
+                   
+//                     if (object.type == buttonText) {
+//                         console.log("match")
+//                         teaTimerEl.textContent = "time"
+//                         teaInstructionsEl.textContent = "temp" }
+
+//                         else { console.log("not a match") } 
+
+                    
+//                 })
+            
+              
+// }
+
+    
+//     teaTypePopulate()
