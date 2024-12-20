@@ -14,7 +14,7 @@
 <header>
     <div class="dropdown-div">
         <button id="choose-tea-btn" class="btn-72 dropbtn" type="button" style="margin-top: 15px">Choose your tea</button>
-        <div id="dropdown-menu" class="dropdown-content">
+        <div id="dropdown-menu" class="dropdown-content no-display">
           <a href="#" class="btn-72 tea-btn">green</a>
           <a href="#" class="btn-72 tea-btn" >white</a>
           <a href="#" class="btn-72 tea-btn">black</a>
@@ -22,17 +22,13 @@
         </div>
       </div>
 </header>
-
+<br>
     <container>
-        <div class="dynamic-content"><H3>Tea instructions</H3></div>
-        <div class="timer-div">
-            <h1 id="timer-text">Tea Timer</h1>
-            <div class="btn-pad" id="timer-buttons">
-            <button class="btn-72" id="start" type="button">Start</button>
-        
-            <button class="btn-72" id="stop" type="button">Stop</button>
-        
-            <button class="btn-72" id="reset" type="button">Reset</button>
+        <br>
+        <div id="instructions-div" class="dynamic-content">
+        <H3></H3></div>
+        <div id="timer-div"class="timer-div"><h1 id="timer-text">0:00</h1>
+            <div class="btn-pad" id="timer-buttons"><button class="btn-72" id="start" type="button">Start</button><button class="btn-72" id="stop" type="button">Stop</button><button class="btn-72" id="reset" type="button">Reset</button>
             </div>
             </div>
         </div>

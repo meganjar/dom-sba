@@ -33,6 +33,7 @@ header {
 
   
     container {
+        
         position: absolute;
         justify-items: center;
         top: 120px; /* Adjust the vertical position */
@@ -43,8 +44,18 @@ header {
         width: 70%; /* Optional: Adjust width */
     }
 
-    H1 {
+    h1:timer-div {
+        display: block;
         text-align: center;
+        font: bold;
+        font-size: 40pt
+        background-color: red;
+        
+    }
+    h1 {
+        display: block;
+        text-align: center;
+        
     }
     
 
@@ -178,9 +189,10 @@ container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: #ffffff57;
-        border-radius: 100px;
+        background-color: #ffffffb5;
+        border-radius:900px;
         padding: 10px;
+        font-size: 18px;
        
     }
 
@@ -201,12 +213,12 @@ container {
     .btn-pad > * {
         padding: 15px; }
 
-    #timer-div {
+    /* #timer-div {
         display: flex;
         flex-direction: row;
         align-items: center;
         border: 5px solid #7e2a5f;
-    }
+    } */
 
     #music-player {
         position: absolute; 

@@ -1,31 +1,3 @@
-// // Set the date we're counting down to
-// var countDownDate = new Date("Jan 5, 2030 15:37:25").getTime();
-
-// // Update the count down every 1 second
-// var x = setInterval(function() {
-
-//   // Get today's date and time
-//   var now = new Date().getTime();
-
-//   // Find the distance between now and the count down date
-//   var distance = countDownDate - now;
-
-//   // Time calculations for days, hours, minutes and seconds
-//   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-//   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-//   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-//   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-//   // Display the result in the element with id="demo"
-//   document.getElementById("timer").innerHTML = days + "d " + hours + "h "
-//   + minutes + "m " + seconds + "s ";
-
-//   // If the count down is finished, write some text
-//   if (distance < 0) {
-//     clearInterval(x);
-//     document.getElementById("timer").innerHTML = "Your tea is ready! :)";
-//   }
-// }, 1000);
 
 let teaArr = [
     {type: "green", time: 2 , temp: 160},
@@ -34,22 +6,53 @@ let teaArr = [
     {type: "herbal", time: 5 , temp: 212} ]
 
 
-let chooseTeaEl = document.getElementById("choose-tea-btn")
+
+let chooseTeaEl = document.getElementById("choose-tea-btn") 
+let timerButtonsEl = document.getElementById("timer-buttons")
+
 let dropdownEl = document.getElementById("dropdown-menu")
 let teaButtonsEl = document.querySelectorAll(".tea-btn")
 let teaInstructionsEl = document.querySelector(".dynamic-content")
-let teaTimerEl = document.getElementById("timer-text")
+let timerDiv = document.getElementById("timer-div")
+let teaTimerEl = timerDiv.firstChild
 let startTimerEl = document.getElementById("start")
 let stopTimerEl = document.getElementById("stop")
 let resetTimerEl = document.getElementById("reset")
 let musicPlayerEl = document.getElementById("music-button")
 let audioPlayerEl = document.getElementById("audio-player")
-// console.log(musicPlayerEl);
+let bellSoundEl = document.createElement("audio")
+bellSoundEl.src = "./assets/bell.mp3"  
+bellSoundEl.id = "bell"
+document.body.appendChild(bellSoundEl) 
 
-// // console.log(teaButtonsEl)
-// // console.log(chooseTeaEl)
-// // console.log(dropdownEl)
-// console.log(teaArr)
+// //remaining items: 
+// 1. timer to countdown in real time 
+// 2. and trigger bell sound
+// 3. push notification 
+// 4. and changeto its text content
+
+// sba req accessing children and style from DOM
+function sbaReq() {
+    let kiddies = timerButtonsEl.children
+  for (kids of kiddies) {
+    kids.style.margin = "5px";
+   
+    }
+  }
+  
+//   kiddies.forEach((node) => {
+//         node.style.margin = "5px"
+//         console.log(timerButtonsEl.children); // Check what's inside the NodeList
+//     })
+ sbaReq()
+
+// The timerCountdown will be a handler function for the timerStart function. It should convert the value into minutes and reduce the count down by one second per second until the count down is 0:00 at wich poiont the audio element should play()
+function timerStart() {
+    
+}
+
+
+
 let isPlaying = false
 function playMusic(){
  
@@ -69,9 +72,9 @@ function playMusic(){
     function chooseTea() {
         chooseTeaEl.addEventListener("click", () => {
             dropdownEl.classList.toggle("no-display")
+            console.log('click');
         })   
     }
-
     chooseTea()
 
 
@@ -107,8 +110,18 @@ function playMusic(){
                         // 4.                     
                         teaTimerEl.textContent = `${minutes}:00`
                         teaInstructionsEl.textContent = `Brew ${type} tea at ${temp}°F for ${minutes} minutes.`}
+                        console.log(teaTimerEl.textContent);
 
                     //     else { console.log("not a match") } 
             })})
                 })}
     teaTypePopulate()
+
+    // BOM Method send push when tea timer is done! even if you stray to another tab its really the window object
+    if ('Notification' in window) {
+        Notification.requestPermission().then(permission => {
+            if (permission === "granted") {
+                new Notification("Hello! This is a push notification.");
+            }
+        });
+    }
