@@ -24,12 +24,15 @@ header {
   footer {
     position: absolute;
     top: 100%;
-    background-color: black;
-    color: white;
+    background-color: #528399;
+    color: rgb(36, 43, 40);
     padding: 40px 20px;
     text-align: center;
-    border-top: 3px solid #2326b1;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    border-top: 3px solid #1d1b1b;
     width: 100%;}
+
+
 
   
     container {
@@ -157,21 +160,21 @@ header {
 }
 
 @media (max-width: 400px) {
-    .btn-51  {
+    /* .btn-51  {
         position: absolute;
-        margin-bottom: 15%;
+       top: 50%;
         width: 150px;
 
-}
+} */
 container {
     
     justify-items: center;
     top: 120px; /* Adjust the vertical position */
     left: 50%; /* Center it horizontally */
     transform: translateX(-50%); /* Ensure true horizontal centering */
-    border: 5px solid #43e243;
-    padding: 20px;
-    width: 70%; /* Optional: Adjust width */
+
+    padding: 1%;
+    width: 90%; /* Optional: Adjust width */
 }
 
   
@@ -181,9 +184,20 @@ container {
     text-decoration: none;
 
   }
+  #music-player 
+  #music-button
+   {
+    position: absolute; 
+    top: 65%; 
+    left: 10%; 
+    height: 50px;
+   
+  
+}
 
 
-    }
+
+    /* }  end mobile styling __________________________ */
 
     .dynamic-content {
         display: flex;
@@ -219,13 +233,13 @@ container {
         align-items: center;
         border: 5px solid #7e2a5f;
     } */
-
+/* 
     #music-player {
         position: absolute; 
         top: 90%; 
         left: 20%; 
         transform: translate(-50%, -80%);
-    }
+    } */
 
     /* Button styling */
     .btn-51,

@@ -28,7 +28,10 @@
         <div id="instructions-div" class="dynamic-content">
         <H3></H3></div>
         <div id="timer-div"class="timer-div"><h1 id="timer-text">0:00</h1>
-            <div class="btn-pad" id="timer-buttons"><button class="btn-72" id="start" type="button">Start</button><button class="btn-72" id="stop" type="button">Stop</button><button class="btn-72" id="reset" type="button">Reset</button>
+            <div class="btn-pad" id="timer-buttons">
+                <button onclick="timerStart()"class="btn-72" id="start" type="button">Start</button>
+                <button onclick="timerStop()"class="btn-72" id="stop" type="button">Stop</button>
+                <button onclick="timerReset()"class="btn-72" id="reset" type="button">Reset</button>
             </div>
             </div>
         </div>
@@ -38,11 +41,14 @@
         <button id="music-button" class="btn-51">Play Music</button>
     </div>
     <footer>
-        <div class="form-group" id="form">
+        <div class="form" id="form">
             <h3>Tea Leaf Reader</h3>
             <p>Enter your name, birthday, and favorite tea to read your fortune</p>
-            <input type="text" id="name" placeholder="Name">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Name"><br><br>
+            <label for="birthday">Birthday</label>
             <input type="date" id="birthday" placeholder="Birthday">
+          <br><br>
             <input  type="radio" id="green" name="tea" value="green">
             <label for="green">Green</label>
             <input type="radio" id="white" name="tea" value="white">
@@ -50,8 +56,8 @@
             <input type="radio" id="black" name="tea" value="black">
             <label for="black">Black</label>
             <input type="radio" id="herbal" name="tea" value="herbal">
-            <label for="herbal">Herbal</label>
-            <button id="submit">Submit</button>
+            <label for="herbal">Herbal</label> <br><br>
+            <button class="btn-72" onclick="teaFortuneGenerator()" id="submit">Submit</button>
         </div>
     </footer>
     <audio id="audio-player" src="./assets/pascal-schumacher-tearjerker.mp3" preload="auto"></audio>
