@@ -301,7 +301,7 @@ box-shadow: inset 5px 5px 10px #cee3f2, inset -5px -5px 10px #faffff;
 }
 
 }
-    /* }  end mobile styling __________________________ */
+ 
 
     .dynamic-content {
         display: flex;
@@ -479,7 +479,6 @@ box-shadow: inset 5px 5px 10px #cee3f2, inset -5px -5px 10px #faffff;
     cursor: pointer;
     transition: all 0.2s; /* Smooth transitions */
   }
-  
   .btn-72:hover {
     background-color: #e6f7ff; /* Light hover background */
     transform: scale(1.05); /* Slight zoom on hover */
@@ -488,5 +487,3 @@ box-shadow: inset 5px 5px 10px #cee3f2, inset -5px -5px 10px #faffff;
 .btn-72:active {
   box-shadow: inset 5px 5px 10px #cee3f2, inset -5px -5px 10px #faffff;
 }
-
-

@@ -59,7 +59,7 @@ function teaTypePopulate() {
 
                     // 4.                     
                     teaTimerEl.textContent = formatTime(remainingSeconds)
-                    teaInstructionsEl.textContent = `Brew ${type} tea at ${temp}°F for ${minutes} minutes.`
+                    teaInstructionsEl.textContent = `Brew ${type} tea at ${temp}°F for ${teaObject.time} minutes.`
                 }
                 // console.log(teaTimerEl.textContent);
 
