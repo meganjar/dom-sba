@@ -214,6 +214,8 @@ const teaFortunes = [
 let fortuneRandom = "";
 let footer = document.querySelector("footer");
 let formText = document.createElement("div");
+footer.insertBefore(formText, footer.form);
+formText.className = "form-text";
  
 formText.classList.add("form-text");
 let form = document.getElementById("form");
@@ -225,11 +227,13 @@ form.addEventListener("submit", (e) => {
 function formValidation(e) {
     let name = form.elements["name"];
     let birthday = form.elements["birthday"];
-    footer.appendChild(formText);
+    
+    
     let valid = true;        
 
         function validateName() {
             if (name.value === "") {
+                footer.insertBefore(formText, footer.firstChild);
                 formText.textContent = "Please provide a name.";
 
                 valid = false;
@@ -253,6 +257,7 @@ function formValidation(e) {
         validateBirthday();
         if (valid) {
             formText.textContent = `${teaFortuneGenerator()}`;
+            form.reset();
         }
     }
 
