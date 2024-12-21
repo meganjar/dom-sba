@@ -32,7 +32,13 @@ header {
     border-top: 3px solid #1d1b1b;
     width: 100%;}
 
-
+    .form-text {
+      text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+    }
 
   
     container {
@@ -42,9 +48,9 @@ header {
         top: 120px; /* Adjust the vertical position */
         left: 50%; /* Center it horizontally */
         transform: translateX(-50%); /* Ensure true horizontal centering */
-        
+        margin-top: 20px;
         padding: 20px;
-        width: 70%; /* Optional: Adjust width */
+        width: 90%; /* Optional: Adjust width */
     }
 
     h1:timer-div {
@@ -58,6 +64,14 @@ header {
     h1 {
         display: block;
         text-align: center;
+        
+    }
+    #timer-text {
+        display: block;
+        text-align: center;
+        font: bold;
+        font-size: 40pt
+       
         
     }
     
@@ -155,48 +169,138 @@ header {
         left: 100px; 
         transform: translate(-50%, -80%);
     }
+
+ 
   
 
 }
 
 @media (max-width: 400px) {
-    /* .btn-51  {
-        position: absolute;
-       top: 50%;
-        width: 150px;
-
-} */
-container {
-    
-    justify-items: center;
-    top: 120px; /* Adjust the vertical position */
-    left: 50%; /* Center it horizontally */
-    transform: translateX(-50%); /* Ensure true horizontal centering */
-
-    padding: 1%;
-    width: 90%; /* Optional: Adjust width */
-}
-
   
-  /* Dropdown button on hover & focus */
+
+  .dynamic-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffffb5;
+    border-radius:900px;
+    padding: 25px;
+    font-size: 20px;
+   
+}
+ container {
+        
+        position: absolute;
+        justify-items: center;
+        top: 120px; /* Adjust the vertical position */
+        left: 50%; /* Center it horizontally */
+        transform: translateX(-50%); /* Ensure true horizontal centering */
+        margin-top: 20px;
+        padding: 20px;
+        width: 90%; /* Optional: Adjust width */
+    }
+  
+    
+ 
   .dropbtn:hover, .dropbtn:focus {
     background-color: #929724
     text-decoration: none;
 
   }
-  #music-player 
-  #music-button
-   {
-    position: absolute; 
-    top: 65%; 
-    left: 10%; 
-    height: 50px;
-   
+ 
+     
   
+
+  h3 {
+      padding: auto;
+      font-size: 20px;
+      text-align: center;
+  }
+
+  .timer-buttons > *{
+      display: flex;
+      flex-direction: row;
+      justify-content: center; 
+      gap: 10px; 
+      margin-top: 20px; 
+      padding-left: 20px;
+      width: 100%;
+      
+      border: 5px solid #a5a3b7;
+  }
+  
+  /* .btn-pad > * {
+      padding: 15px; }
+      width: 100%; */
+
+
+
+  /* #music-player {
+      position: absolute; 
+      top: 90%; 
+      left: 20%; 
+      height: 50px;
+  }  */
+
+.btn-72:disabled {
+cursor: default;
+}
+.btn-72:-moz-focusring {
+outline: auto;
+}
+.btn-72 svg {
+display: block;
+vertical-align: middle;
+}
+.btn-72 [hidden] {
+display: none;
+}
+.btn-72 {
+  background: #fff;
+  border-radius: 999px; /* Maintain rounded corners */
+  box-shadow: 5px 5px 10px #e48a56c6, -5px -5px 5px #ffffff9d;
+  box-sizing: border-box;
+  color: #5d1352;
+  display: inline-block; /* Align buttons side-by-side */
+  font-weight: 900;
+  overflow: hidden;
+  padding: 15px /* Reduce padding for better size */
+  margin: 5px;; /* Add spacing between buttons */
+  position: relative;
+  text-transform: uppercase;
+  text-align: center; /* Center text horizontally */
+  line-height: 1.5; /* Ensure vertical alignment */
+  font-size: 14px; /* Adjust text size */
+   /* Keep black border */
+  cursor: pointer;
+  transition: all 0.2s; /* Smooth transitions */
+}
+
+.btn-72:hover {
+  background-color: #e6f7ff; /* Light hover background */
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.btn-72:active {
+box-shadow: inset 5px 5px 10px #cee3f2, inset -5px -5px 10px #faffff;
 }
 
 
 
+.dynamic-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffffb5;
+  border-radius:900px;
+  padding-right: 25px;
+  padding-left: 25px;
+  padding-top: 5;
+  font-size: 20px;
+ 
+}
+
+}
     /* }  end mobile styling __________________________ */
 
     .dynamic-content {
@@ -205,8 +309,8 @@ container {
         align-items: center;
         background-color: #ffffffb5;
         border-radius:900px;
-        padding: 10px;
-        font-size: 18px;
+        padding: 25px;
+        font-size: 20px;
        
     }
 
@@ -221,27 +325,23 @@ container {
         gap: 10px; 
         margin-top: 20px; 
         padding: 20px;
-        border: 5px solid #342a7e;
+        border: 5px solid #a5a3b7;
     }
     
-    .btn-pad > * {
-        padding: 15px; }
+    .btn-pad  {
+        padding: 15px; 
+      width: 100%;}
 
-    /* #timer-div {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        border: 5px solid #7e2a5f;
-    } */
-/* 
+
+
     #music-player {
         position: absolute; 
-        top: 90%; 
+        top: 93%; 
         left: 20%; 
         transform: translate(-50%, -80%);
     } */
 
-    /* Button styling */
+    Button styling
     .btn-51,
     .btn-51 *,
     .btn-51 :after,
@@ -265,13 +365,13 @@ container {
       -webkit-appearance: button;
       background-color: #000;
       background-image: none;
-      color: #ffffff00;
+      color: #c5bcbc00;
       cursor: pointer;
       font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
         Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
         Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
       font-size: 100%;
-      line-height: 1.5;
+      line-height: 1.9;
       margin: 0;
       -webkit-mask-image: -webkit-radial-gradient(#7e2a2a, #fff);
       padding: 0;
@@ -340,7 +440,7 @@ container {
 .btn-72 :before,
 .btn-72:after,
 .btn-72:before {
-  border: 6px solid red
+  border: 6px solid red;
   box-sizing: border-box;
   padding-top: 16px;
 }
